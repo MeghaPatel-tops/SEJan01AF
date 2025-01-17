@@ -1,0 +1,25 @@
+DDL:data definition lang:
+structure
+1.create
+databse create command
+CREATE DATABASE ECOMMERCE
+
+create table
+CREATE TABLE Product (pid int PRIMARY KEY AUTO_INCREMENT,pname varchar(50),price float, description varchar(200))
+
+Alter:
+alter table to add new column
+ALTER TABLE product add COLUMN qty int;
+
+alter table to modify exiting column
+ALTER TABLE product CHANGE pname productname varchar(200)
+
+alter table to drop column
+ALTER TABLE product DROP COLUMN 
+
+Drop:
+database drop
+drop DATABASE ecommerce
+
+table drop
+drop TABLE product
