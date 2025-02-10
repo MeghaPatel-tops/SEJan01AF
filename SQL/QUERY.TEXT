@@ -23,3 +23,54 @@ drop DATABASE ecommerce
 
 table drop
 drop TABLE product
+
+
+
+DML:Data Manipulation lanaguage
+
+Insert 
+insert into product(pname,price,description)VALUES("laptop","12500.98","lenovo laptop");
+
+insert into product(pname)VALUES("laptopq");
+
+
+Update
+
+update product set description="test product" ,price = "12345" where pid =2;
+update product set qty=10;
+
+
+Delete
+DELETE from product where pid =2 
+
+
+DQL:
+data Query lanaguage
+
+select
+SELECT * from customer;
+
+SELECT CUST_NAME,CUST_CITY,WORKING_AREA FROM `customer`;
+
+SELECT * FROM `customer` WHERE WORKING_AREA = 'NEW YORK';
+
+SELECT * FROM `customer` WHERE AGENT_CODE ='A002';
+
+SELECT CUST_NAME,CUST_CITY,WORKING_AREA FROM `customer` ORDER by CUST_NAME ASC;
+
+SELECT CUST_NAME,CUST_CITY,WORKING_AREA FROM `customer` ORDER by CUST_NAME DESC;
+
+select * from customer where CUST_CITY="NEW YORK" and GRADE >= 2;
+
+select * from customer where GRADE >= 3 or OPENING_AMT >=10000
+
+select * from customer where  not CUST_CITY = "Torento"
+
+SELECT * FROM customer WHERE CUST_CITY in ("Mumbai","Chennai")
+
+SELECT * FROM `customer` WHERE GRADE in (1,3)
+
+SELECT MIN(OPENING_AMT) as  min_salary FROM `customer` WHERE 1
+SELECT count(CUST_NAME) FROM customer WHERE CUST_CITY="NEW YORK";
+
+SELECT sum(OPENING_AMT) as total_salary FROM customer WHERE CUST_CITY="NEW YORK";
